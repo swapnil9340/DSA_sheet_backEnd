@@ -14,12 +14,10 @@
 ### `topics`
 - `_id`, `slug` (unique), `name`, `description`, `order`, optional `parentTopicId`, `isActive`, timestamps
 - Indexes: unique `slug`; `{order:1,name:1}`; `isActive`
-- Seed includes 10 ordered chapters: Arrays & Hashing; Strings; Two Pointers & Sliding Window; Binary Search; Linked Lists; Stack & Queue; Recursion & Backtracking; Trees & BST; Graphs; Dynamic Programming & Greedy.
 
 ### `problems`
 - `_id`, `slug` (unique; also matches existing frontend problem IDs), `number` (unique), `title`, `topicId` reference, `difficulty`, `pattern`, `summary`, `estimatedMinutes`, `resources.practiceUrl`, `resources.youtubeUrl`, `resources.articleUrl`, `isActive`, `sourceTag`, timestamps
 - Indexes: unique `slug`; unique `number`; `{topicId:1,difficulty:1,number:1}`; `{title:1,pattern:1}`
-- Seed count: 50 problems. Difficulty mix: 18 Easy, 22 Medium, 10 Hard.
 
 ### `userprogress`
 - `_id`, `userId` reference, `problemId` reference, `status` (`not_started|in_progress|completed`), `completedAt`, `attempts`, `notes`, timestamps
@@ -37,6 +35,3 @@
 - `users many ── many problems` through `userprogress`; unique on `{userId,problemId}`.
 - `users 1 ── many studyplans` via `studyplans.userId`.
 
-## Initial seed
-
-Run `npm run seed` after setting `MONGO_URI`. The script upserts topics and problem records so it can be re-run. It reports counts and difficulty distribution. It does not create users, passwords, or study progress.

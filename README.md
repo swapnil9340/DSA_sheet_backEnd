@@ -1,6 +1,6 @@
 # DSA Sheet — Node.js Backend
 
-This is **Phase 2 (Node/Express API)** for the fresh DSA Sheet application. It matches the agreed project decisions: React + JavaScript frontend, Node.js/Express API, MongoDB persistence, secure HttpOnly JWT cookie, 10 chapters and 50 curated starter problems, persistent per-user completion progress, a dedicated study calendar, optional Redis caching, and health checks suitable for an AWS Application Load Balancer.
+This is **Phase 2 (Node/Express API)** for the DSA Sheet application. It provides a React + JavaScript frontend integration, Node.js/Express API, MongoDB persistence, secure HttpOnly JWT cookie, per-user completion progress, a dedicated study calendar, optional Redis caching, and health checks suitable for an AWS Application Load Balancer.
 
 > This source is prepared, but it is not a live deployment. MongoDB URI, JWT secret, optional Redis endpoint, and AWS resources must be configured in your environment. Never commit `.env` or production credentials.
 
@@ -32,19 +32,13 @@ This is **Phase 2 (Node/Express API)** for the fresh DSA Sheet application. It m
 
    Generate a secret with `openssl rand -base64 48` if OpenSSL is installed. Paste the result into `.env`; do not use the example secret for production.
 
-4. Seed the 10 chapters and 50 starter problems:
-
-   ```bash
-   npm run seed
-   ```
-
-5. Start the API:
+4. Start the API:
 
    ```bash
    npm run dev
    ```
 
-6. Verify:
+5. Verify:
 
    - `GET http://localhost:5000/health`
    - `GET http://localhost:5000/api/v1/topics`
@@ -67,16 +61,11 @@ For a horizontally scaled deployment, all API instances must point to the **same
 - The backend enforces a minimum password length of 8 characters. Align the existing frontend form's current 6-character helper text/validation to 8 during API integration.
 - Prefer serving React and `/api` from the same site behind Nginx/ALB. Do not switch to cross-site `SameSite=None` cookies without HTTPS and a deliberate CSRF strategy.
 
-## Data seed and resource quality
-
-The seed script upserts **10 topics and 50 problems** and prints the difficulty counts. Expected distribution: **18 Easy, 22 Medium, 10 Hard**. LeetCode practice links are problem-specific starter links; YouTube and GeeksforGeeks URLs are currently search links, not manually verified direct tutorials/articles. Verify all three resources for every problem before production.
-
 ## Useful commands
 
 ```bash
 npm run dev       # local API with file watch
 npm start         # production-style start
-npm run seed      # idempotently seed catalogue data
 npm test          # API smoke tests
 npm run check     # quick Node syntax check
 ```
