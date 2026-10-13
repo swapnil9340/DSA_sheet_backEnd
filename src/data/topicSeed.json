@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "arrays-and-hashing",
+    "name": "Arrays & Hashing",
+    "description": "Curated problems and core patterns for Arrays & Hashing.",
+    "order": 1
+  },
+  {
+    "slug": "strings",
+    "name": "Strings",
+    "description": "Curated problems and core patterns for Strings.",
+    "order": 2
+  },
+  {
+    "slug": "two-pointers-and-sliding-window",
+    "name": "Two Pointers & Sliding Window",
+    "description": "Curated problems and core patterns for Two Pointers & Sliding Window.",
+    "order": 3
+  },
+  {
+    "slug": "binary-search",
+    "name": "Binary Search",
+    "description": "Curated problems and core patterns for Binary Search.",
+    "order": 4
+  },
+  {
+    "slug": "linked-lists",
+    "name": "Linked Lists",
+    "description": "Curated problems and core patterns for Linked Lists.",
+    "order": 5
+  },
+  {
+    "slug": "stack-and-queue",
+    "name": "Stack & Queue",
+    "description": "Curated problems and core patterns for Stack & Queue.",
+    "order": 6
+  },
+  {
+    "slug": "recursion-and-backtracking",
+    "name": "Recursion & Backtracking",
+    "description": "Curated problems and core patterns for Recursion & Backtracking.",
+    "order": 7
+  },
+  {
+    "slug": "trees-and-bst",
+    "name": "Trees & BST",
+    "description": "Curated problems and core patterns for Trees & BST.",
+    "order": 8
+  },
+  {
+    "slug": "graphs",
+    "name": "Graphs",
+    "description": "Curated problems and core patterns for Graphs.",
+    "order": 9
+  },
+  {
+    "slug": "dynamic-programming-and-greedy",
+    "name": "Dynamic Programming & Greedy",
+    "description": "Curated problems and core patterns for Dynamic Programming & Greedy.",
+    "order": 10
+  }
+]

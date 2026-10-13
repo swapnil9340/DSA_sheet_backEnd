@@ -1,0 +1,30 @@
+{
+  "name": "dsa-sheet-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Express API for the DSA Sheet learning application",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "dev": "node --watch --watch-path=src src/server.js",
+    "start": "node src/server.js",
+    "seed": "node scripts/seed.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "morgan": "^1.10.0",
+    "redis": "^4.7.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": { "supertest": "^7.1.4" }
+}

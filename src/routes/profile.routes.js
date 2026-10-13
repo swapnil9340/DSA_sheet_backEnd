@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { getProfile, updateProfile } from '../controllers/profile.controller.js';
+import { authenticate } from '../middleware/authenticate.js';
+import { validate } from '../middleware/validate.js';
+import { profileSchema } from '../validators/schemas.js';
+const router = Router();
+router.use(authenticate);
+router.get('/', getProfile);
+router.patch('/', validate(profileSchema), updateProfile);
+export default router;
